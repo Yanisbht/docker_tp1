@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>API Rest pour l'administration système : Sommaire</title>
+  <style>
+    body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; background:#1e1e1e; color:#eee; max-width:900px; margin:60px auto; padding:0 24px; }
+    h1 { border-bottom:2px solid #4ec9b0; padding-bottom:8px; }
+    a.card { display:block; background:#2d2d2d; border-left:4px solid #4ec9b0; padding:20px 24px; margin:16px 0; color:#eee; text-decoration:none; border-radius:4px; transition:transform .15s; }
+    a.card:hover { transform:translateX(4px); background:#333; }
+    a.card h2 { margin:0 0 8px 0; color:#4ec9b0; }
+    a.card p  { margin:0; color:#bbb; }
+    ul.docs { list-style:none; padding:0; }
+    ul.docs li { margin:8px 0; }
+    ul.docs a, ul.docs code { color:#4ec9b0; }
+    footer { margin-top:60px; color:#777; font-size:.85em; }
+  </style>
+</head>
+<body>
+  <h1>API Rest pour l'administration système</h1>
+  <p>3 demi-journées · une heure de théorie au plus, puis TP en autonomie</p>
+
+  <a class="card" href="dj1-parler-en-http/">
+    <h2>Demi-journée 1 : Parler à une infrastructure en HTTP</h2>
+    <p>Du CLI à l'API, REST et HTTP (ressources, verbes, codes de statut, idempotence), cURL, OpenAPI, requests, premiers pas avec FastAPI. TP1 à TP3.</p>
+  </a>
+
+  <h2>Pendant les TP</h2>
+  <ul class="docs">
+    <li><code>projet/sujet.html</code> : le sujet du projet, contrat complet de l'API à construire</li>
+    <li><code>projet/contrat-openapi.yaml</code> : le contrat formel, à ouvrir dans editor.swagger.io</li>
+    <li><code>python verifier.py</code> : ce qui passe, ce qui manque</li>
+  </ul>
+
+  <footer>
+    Slides Reveal.js · navigation : flèches / espace · vue d'ensemble : <kbd>O</kbd> ·
+    recherche : <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>F</kbd> · plein écran : <kbd>F</kbd>
+  </footer>
+</body>
+</html>

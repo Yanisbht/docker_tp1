@@ -1,0 +1,81 @@
+/* Surcharge commune aux trois decks : thème Reveal "black".
+   Ces slides servent aussi de documentation de référence pendant les TP :
+   elles sont denses. La base est donc calibrée à 32px et non aux 42px du
+   thème d'origine, qui vise des slides de conférence à trois lignes. */
+
+/* ─── Réglage principal ───────────────────────────────────────────────────
+   Une seule valeur à toucher si le texte est trop petit ou déborde.
+   42px = défaut Reveal (slides de conférence) · 28px = très dense
+   32px = compromis retenu pour des slides qui servent aussi de doc.        */
+:root { --r-main-font-size: 32px; }
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 { color: #4ec9b0; text-transform: none; }
+.reveal h1 { font-size: 1.9em; margin-bottom: 0.4em; }
+.reveal h2 { font-size: 1.35em; margin-bottom: 0.45em; }
+.reveal h3 { font-size: 1.1em; margin-bottom: 0.4em; }
+.reveal h4 { font-size: 0.95em; }
+
+.reveal p, .reveal li { line-height: 1.35; }
+.reveal p { margin: 0.5em 0; }
+.reveal ul, .reveal ol { margin: 0.4em 0; }
+.reveal li { margin: 0.18em 0; }
+
+.reveal pre { width: 100%; box-shadow: none; margin: 0.45em 0; }
+.reveal pre code {
+  font-size: 0.72em; line-height: 1.35; max-height: 640px; padding: 0.7em 0.9em;
+}
+
+.reveal table { font-size: 0.78em; margin: 0.4em 0; }
+.reveal table th { color: #4ec9b0; border-bottom: 2px solid #4ec9b0; }
+.reveal table td, .reveal table th { padding: 0.22em 0.55em; }
+
+.reveal blockquote {
+  width: 100%; font-size: 0.88em; font-style: normal;
+  background: rgba(78, 201, 176, 0.08);
+  border-left: 4px solid #4ec9b0; box-shadow: none;
+  padding: 0.5em 0.9em; margin: 0.5em 0; text-align: left;
+}
+
+/* Deux blocs côte à côte (requête | réponse, avant | après) */
+.reveal .cols { display: flex; gap: 1.1em; align-items: flex-start; text-align: left; }
+.reveal .cols > div { flex: 1; min-width: 0; }
+.reveal .cols h4 {
+  margin: 0 0 0.25em; font-size: 0.62em; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #888;
+}
+.reveal .cols pre code { font-size: 0.62em; }
+.reveal .cols p { margin: 0.35em 0 0; }
+
+/* Utilitaires */
+.reveal .small   { font-size: 0.72em; color: #aaa; }
+.reveal .lead    { font-size: 1.08em; color: #ddd; }
+.reveal .ok      { color: #7ec77e; }
+.reveal .ko      { color: #e57373; }
+.reveal .warn    { color: #ffb74d; }
+.reveal .muted   { color: #888; }
+.reveal .center  { text-align: center; }
+.reveal .left    { text-align: left; }
+
+.reveal .ref {
+  position: absolute; bottom: -0.5em; right: 0;
+  font-size: 0.5em; color: #666; letter-spacing: 0.05em;
+}
+
+.reveal .memo {
+  background: rgba(255, 183, 77, 0.09);
+  border-left: 4px solid #ffb74d;
+  padding: 0.5em 0.9em; margin: 0.5em 0; text-align: left; font-size: 0.85em;
+}
+
+.reveal .valid {
+  background: rgba(126, 199, 126, 0.1);
+  border-left: 4px solid #7ec77e;
+  padding: 0.45em 0.9em; margin: 0.5em 0; text-align: left; font-size: 0.85em;
+}
+
+/* Les listes et tableaux d'un bloc .left ne doivent pas hériter du centrage */
+.reveal .left table { margin-left: 0; }
+
+/* Garde-fou : signale visuellement une slide qui déborde encore, au lieu de
+   la laisser tronquer silencieusement. Retirer si ça gêne à la projection. */
+.reveal .slides section { overflow: visible; }
