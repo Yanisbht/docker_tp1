@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-26T10:55:50.700951",
+  "containers": [
+    {
+      "id": "f3daf1908add80cc5e41e6b1566b3c469bb2d15717af8c76279ce343752c12c1",
+      "name": "intrus",
+      "image": "nginx:alpine",
+      "state": "running",
+      "cpu_percent": 0.0,
+      "memory_mb": 5.35
+    },
+    {
+      "id": "6dbcafc3ba07bd7516f8e82800239c0fd9bc20d373a86b6387b5dec67e77f7a3",
+      "name": "web1",
+      "image": "nginx:alpine",
+      "state": "running",
+      "cpu_percent": 0.0,
+      "memory_mb": 15.14
+    },
+    {
+      "id": "b60e208ff2b809839fee9338e7a2665fa5a104d20910391d89998d5f4f6cfca9",
+      "name": "apirest-docker-api-1",
+      "image": "tecnativa/docker-socket-proxy:v0.4.2",
+      "state": "running",
+      "cpu_percent": 0.0,
+      "memory_mb": 28.63
+    }
+  ],
+  "netbox": {
+    "error": "HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/status/ (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=8080): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée\"))"
+  }
+}
